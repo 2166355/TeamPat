@@ -1,0 +1,17 @@
+HTML
+
+Topic
+
+Tables - in HTML it is defined using <table> and it contians table cells '<td>' means table data, table row '<tr>'.
+inserting tables in html is done by row.
+
+Table cells can be merged by using colspan and rowspan.
+
+
+CSS
+
+Topic
+
+Animation - animating objects in HTML with out using JavaScript, it lets you change style continuously from one to another.
+
+In CSS animation you need to specify the animation inside the @keyframes.
