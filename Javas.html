@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JavaScript Radio Button</title>
+        <meta charset="UTF-8">
+        
+        <script>
+                 function myF() {
+                    var ltype = "";
+                    var iterations = document.getElementById("iterators").value;
+                    var output = "";
+                    var i = 0;
+
+                    if(document.getElementById("l0").checked)
+                    {
+                        x=document.getElementById("l0").value;
+                        for (i = 0; i < iterations; i++) {
+                            output += "This is for loop number "+i+"\n";
+                        }
+
+                    }
+                    
+                    else if(document.getElementById("l1").checked)
+                    {
+                        x=document.getElementById("l1").value;
+                        while(i<iterations){
+                            output += "This is while loop number "+i+"\n";
+                            i++;
+                        }
+                    }
+                    
+                    else if(document.getElementById("l2").checked)
+                    {
+                        x=document.getElementById("l2").value;
+                        do{
+                            output += "This is do-while loop number "+i+"\n";
+                            i++;
+                        }while(i<iterations);
+                    }
+                    document.getElementById('ta').value = output;
+                }
+        </script>
+        
+    </head>
+    <body>
+
+Select Loop type:<br>
+<input type="radio" name="looptype" value="for" id="l0" >For Loop<br>
+<input type="radio" name="looptype" value="while" id="l1" >While Loop<br>
+<input type="radio" name="looptype" value="dowhile" id="l2">Do-While Loop<br>
+<br><br>
+How many loops:
+<input type="text" id="iterators" size="5">
+<button onclick="myF()" >Try it</button>
+<br><br>
+
+<textarea rows="4" cols="50" id = "ta"></textarea>
+
+    </body>
+</html>
