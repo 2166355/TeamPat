@@ -12,6 +12,50 @@ CSS
 
 Topic
 
-Animation - animating objects in HTML with out using JavaScript, it lets you change style continuously from one to another.
+Animation - animating objects in HTML with out using JavaScript, it lets you change style continuously from one to another. These are two components, first the style descibe the Css animation and last is the keyframes that will tell the start and end of animations style.
 
 In CSS animation you need to specify the animation inside the @keyframes.
+
+Animation-name
+
+Syntax
+	animation-name: <single-animation-name>;
+
+Animation-duration
+
+Syntax
+	animation-duration: <time>;
+
+Animation-timing-function
+
+Syntax
+	animation-timing-function: <timing-function>;
+
+Animation-delay
+
+Syntax
+	animation-delay: <time>;
+
+Animation-iteration-count
+
+Syntax
+	animation-iteration-count: infinite| <number>
+
+Animation-direction
+
+Syntax
+	animation-direction: normal | reverse | alternate | alternate-reverse
+
+Animation-fill-mode
+
+Syntax
+	animation-fill-mode: none | forwards | backwards | both
+
+Animation-play-state
+
+Syntax
+	animation-play-state: running | paused
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
