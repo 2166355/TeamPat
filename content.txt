@@ -59,3 +59,7 @@ Syntax
 
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+JavaScript
+
+Loops in programming are lines of code that are used if you want to execute a block of code to run repeatedly. The loops will iterate based on a certain amount of times specified or if a certain condition is true. There are 3 kinds of loops in JavaScript: for-loop, while-loop and the do-while loop.
