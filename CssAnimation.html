@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style> 
+		div {
+  		width: 150px;
+ 		height: 150px;
+  		background-color: pink;
+  		border-radius: 50%;
+  		position: relative;
+  		animation-name: cube;
+  		animation-duration: 5s;
+  		animation-delay: 2s;
+  		animation-iteration-count: infinite;
+		}
+
+		@keyframes cube {
+		0%   {background-color:red; left:0px; top:0px;}
+		25%  {background-color:black; left:200px; top:200px; border-radius: 0%;}
+		50%  {background-color:blue; left:0px; top:200px; border-radius: 50%}
+		75%  {background-color:green; left:200px; top:0px; border-radius: 0%}
+  		100% {background-color:red; left:0px; top:0px;}
+		}
+	</style>
+	<body>
+	<div>
+	</div>
+	</body>
+</html>
