@@ -88,16 +88,16 @@
                     }       341
                 }
 
-                else if(document.getElementById("l1").checked){
-                    if(sv<=se && ch==="--"){
+                else if(document.getElementById("l1").checked){                                                     //if radio button l1,the radio button for the while loop, is checked
+                    if(sv<=se && ch==="--"){                                                                        //check the input of the user
                         alert("Starting value must not be less than the end value if you are decrementing!");
                         sv = 0;
                         se=0;
                     }else if (sv>=se && ch==="++"){
                         alert("Starting value must not be greater than the end value if you are incrementing!");
                     }else{
-                    if(ch==="++"){
-                        switch (fc){
+                    if(ch==="++"){                                                                                  //if the user chose increment, do the following
+                        switch (fc){                                                                                //These are the different cases of while loops
                             case "<":
                                 while(sv<se){
                                     output+= "This is while loop number "+sv+"\n";
@@ -133,8 +133,8 @@
                                 }
                             break;
                         }
-                    } else if(ch === "--"){
-                        switch (fc){
+                    } else if(ch === "--"){                                                                         //If the user chose decrement
+                        switch (fc){                                                                                //different cases of the while loop with decrement
                             case "<":
                                 while(sv<se){
                                     output += "This is while loop number "+sv+"\n";
@@ -173,47 +173,47 @@
                     }                        
                 }
 
-                }else if(document.getElementById("l2").checked){
-                    if(sv<=se && ch==="--"){
+                }else if(document.getElementById("l2").checked){                                                //if radio button l2, the radio button for the do while loop, is checked
+                    if(sv<=se && ch==="--"){                                                                    
                         alert("Starting value must not be less than the end value if you are decrementing!");
                         sv = 0;
                         se=0;
                     }else if (sv>=se && ch==="++"){
                         alert("Starting value must not be greater than the end value if you are incrementing!");
                     }else{
-                    if(ch==="++"){
-                        switch (fc){
+                    if(ch==="++"){                                                                              //if the user chose increment
+                        switch (fc){                                                                            //different cases of the do-while loop when the user chooses increment
                             case "<":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv<se);
                             break;
 
                             case ">":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv>se);
                             break;
 
                             case "<=":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv<=se);
                             break;
 
                             case ">=":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                            
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv>=se);
                             break;
 
                             case "==":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                          
                                     sv++;
                                 }while(sv==se);
                             break;
@@ -221,35 +221,35 @@
                     } else if(ch === "--"){
                         switch (fc){
                             case "<":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv<se);
                             break;
 
                             case ">":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                             
+                                    output += "This is do-while loop number "+sv+"\n";                          
                                     sv++;
                                 }while(sv>se);
                             break;
 
                             case "<=":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                            
+                                    output += "This is do-while loop number "+sv+"\n";                          
                                     sv++;
                                 }while(sv<=se);                            break;
 
                             case ">=":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                            
+                                    output += "This is do-while loop number "+sv+"\n";                           
                                     sv++;
                                 }while(sv>=se);
                             break;
 
                             case "==":
-                                do{                                                                             //do while loop
-                                    output += "This is do-while loop number "+sv+"\n";                           //Changes the value of the variable output "This is do while loop number " + iteration number
+                                do{                                                                            
+                                    output += "This is do-while loop number "+sv+"\n";                          
                                     sv++;
                                 }while(sv==se);
                             break;
@@ -259,7 +259,7 @@
 
                 }
                 document.getElementById('ta').value = output;                                       //prints the output of the loop chosen by the user on the text area
-                output = "";
+                output = "";                                                                        //set the value of the variables to null or 0
                 sv = 0;
                 se=0;
             }
