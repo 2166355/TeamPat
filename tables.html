@@ -8,28 +8,29 @@
     <script type="text/javascript">
         function createTable() {
             var body = document.getElementsByTagName("body")[0];
-            var cols = document.getElementById("Columns").value;
-            var rowse = document.getElementById("Rows").value;
+            var cols = document.getElementById("Columns").value;                                            //gets the value of the textfield for columns and stores it in the variable cols
+            var rowse = document.getElementById("Rows").value;                                              //gets the value of the textfield for columns and stores it in the variable cols
 
 
-            var table = document.createElement('table');
-            table.setAttribute('id', 'generatedTable');
+            var table = document.createElement('table');                                                    //creates a new table element
+            table.setAttribute('id', 'generatedTable');                                                     //sets the attributes of the table
             table.setAttribute('border','2');
 
-            for (var i = 0; i <rowse; i++) {
+            for (var i = 0; i <rowse; i++) {                                                                //executes a for loop that creates the table with the user input as the dimensions of the table
             var tr = table.insertRow(-1);
                 for (var j = 0; j < cols; j++) {
                     var td = document.createElement('td');
                     td = tr.insertCell(-1);
-                    td.innerHTML = j+","+i;
+                    td.innerHTML = "This is cell: "+j+","+i;
                 }
             }
-            body.appendChild(table);
-
-            document.getElementById("createTable").disabled = true;
+            body.appendChild(table);                                                                        //appends the table to the html
+            document.getElementById("createTable").disabled = true;                                         //disable the generate table button
+            document.getElementById("inRows").disabled = false;
+            document.getElementById("inCols").disabled = false;
         }
 
-        function insertRow(){
+        function insertRow(){                                                                               //creates a function named insertRow that inserts a new row on the existing table 
             var table = document.getElementById("generatedTable");
             var row = document.getElementById("Rows").value;
             var cols = table.rows[0].cells.length;
@@ -37,30 +38,36 @@
             row = table.insertRow(-1);
             for (var i = 0; i<cols; i++) {
                 var cell = row.insertCell(-1);
-                cell.innerHTML = rowval+","+i;
+                cell.innerHTML = "This is cell: "+rowval+","+i;
             }
         }
 
-        function insertCols(){
+        function insertCols(){                                                                               //creates a function named insertRow that inserts a new row on the existing table 
             var table = document.getElementById("generatedTable");
             var row = table.getElementsByTagName("tr").length;
             var colval = table.rows[0].cells.length;
 
             for (var w = 0; w<row; w++) {
                 var cell = table.rows[w].insertCell(-1);
-                cell.innerHTML = w+","+colval;
+                cell.innerHTML = "This is cell: "+w+","+colval;
             }
         }
 
     </script>
+
+     <style type="text/css">
+        input[type=number]{
+            width:30px;
+        } 
+    </style>
+
     <body>
         Enter the Dimensions of the table:<br>
-        Columns:<input type="text" id="Columns" size="1"><br>
-        Rows:<input type="text" id="Rows" size="1"><br><br>
+        Columns:<input type="number" id="Columns" size="1" min = "1"><br>
+        Rows:<input type="number" id="Rows" size="1" min = "1"><br><br>
         <button id = "createTable" onclick="createTable()" >Generate Table</button><br><br>
-        <button onclick="insertCols()" >Add Column</button><br>
-        <button onclick="insertRow()" >Add Row</button>
-
+        <button id = "inCols" onclick="insertCols()" disabled = "true">Add Column</button><br>
+        <button id = "inRows" onclick="insertRow()" disabled="true">Add Row</button>
 
     </body>
 </html>
