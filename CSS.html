@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animations</title>
+	<style>
+			:root {
+			--initialColor: red;
+			--secondColor: black;
+			--thirdColor: blue;
+			--fourthColor:green;
+			}
+
+			#div2 {
+		  		width: 150px;
+		 		height: 150px;
+		  		background-color: var(--initialColor);
+		  		border-radius: 50%;
+		  		position: relative;
+		  		animation-name: cube-sphere;
+		  		animation-duration: 5s;
+		  		animation-delay: 2s;
+		  		animation-iteration-count: infinite;
+		  		margin-top: 5%;
+			}
+
+			@keyframes cube-sphere {
+				0%   {background-color:var(--initialColor); left:0px; top:0px;}
+				25%  {background-color:var(--secondColor); left:200px; top:200px;}
+				50%  {background-color:var(--thirdColor); left:0px; top:200px;}
+				75%  {background-color:var(--fourthColor); left:200px; top:0px;}
+		  		100% {background-color:var(--initialColor); left:0px; top:0px;}
+			}
+			#sub {
+				text-align: center;
+				margin-left: 35%;
+			}
+		</style>
+		<script>
+			function colorChanger() {
+				document.documentElement.style.setProperty('--initialColor', document.getElementById("iniColor").value);
+				document.documentElement.style.setProperty('--secondColor', document.getElementById("secColor").value);
+				document.documentElement.style.setProperty('--thirdColor', document.getElementById("thiColor").value);
+				document.documentElement.style.setProperty('--fourthColor', document.getElementById("fouColor").value);
+			}
+		</script>
+</head>
+<body>
+	<h1>CSS Animations</h1>
+	<div class='div1'>
+		<label>choose intial color: </label>
+		<input type="color" id="iniColor" value="#ff66cc">
+
+		<label>choose second color: </label>
+		<input type="color" id="secColor" value="#ff66cc">
+
+		<label>choose third color: </label>
+		<input type="color" id="thiColor" value="#ff66cc">
+
+		<label>choose fourth color: </label>
+		<input type="color" id="fouColor" value="#ff66cc">
+
+		<br>
+		<button onclick="colorChanger()" id="sub">olol</button>
+		<br>
+		<div id='div2'></div>
+	</div>
+
+</body>
+</html>
