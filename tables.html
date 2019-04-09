@@ -38,7 +38,7 @@
             row = table.insertRow(-1);
             for (var i = 0; i<cols; i++) {
                 var cell = row.insertCell(-1);
-                cell.innerHTML = "This is cell: "+rowval+","+i;
+                cell.innerHTML = "This is new cell: "+rowval+","+i;
             }
         }
 
@@ -49,7 +49,7 @@
 
             for (var w = 0; w<row; w++) {
                 var cell = table.rows[w].insertCell(-1);
-                cell.innerHTML = "This is cell: "+w+","+colval;
+                cell.innerHTML = "This is new cell: "+w+","+colval;
             }
         }
 
